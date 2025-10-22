@@ -64,7 +64,7 @@ COPY --from=deps /usr/src/app/node_modules ./node_modules
 
 # Copy Next.js build output
 COPY --from=build /usr/src/app/.next ./.next
-COPY --from=build /usr/src/app/public ./public
+#COPY --from=build /usr/src/app/public ./public
 COPY --from=build /usr/src/app/package.json ./package.json
 
 

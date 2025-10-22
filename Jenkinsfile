@@ -7,6 +7,7 @@ pipeline {
         CONTAINER_PORT = "9002"
         GITHUB_REPO = "https://github.com/abhiramragu/studio.git"
         APP_DIR = "src"   
+        DOCKER_HOST = 'unix:///var/run/docker.sock'
     }
 
     stages {

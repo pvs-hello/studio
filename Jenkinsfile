@@ -5,8 +5,7 @@ pipeline {
         IMAGE_NAME = "studio-app"
         IMAGE_TAG = "latest"
         CONTAINER_PORT = "9002"
-        GITHUB_REPO = "https://github.com/abhiramragu/studio.git"
-        APP_DIR = "src"   
+        GITHUB_REPO = "https://github.com/abhiramragu/studio.git"  
         DOCKER_HOST = 'unix:///var/run/docker.sock'
     }
 
@@ -22,9 +21,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Building Docker image from ${APP_DIR} folder..."
-                dir("${APP_DIR}") {
-                    sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
-                }
+                sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
             }
         }
 

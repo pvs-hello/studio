@@ -17,7 +17,7 @@ export default function LoginPage() {
           <form action={mockLogin}>
             <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
               <LogIn className="mr-2 h-4 w-4" />
-              Sign In as Mock User
+              Sign In as Mock
             </Button>
           </form>
            <p className="px-8 mt-4 text-center text-sm text-muted-foreground">

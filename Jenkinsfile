@@ -41,6 +41,8 @@ pipeline {
             steps {
                 echo "Running new container..."
                 sh """
+                docker rm -f studio-app || true
+
                 docker run -d --name ${IMAGE_NAME} -p ${CONTAINER_PORT}:9002 ${IMAGE_NAME}:${IMAGE_TAG}
                 """
             }
